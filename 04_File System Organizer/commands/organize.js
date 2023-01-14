@@ -2,7 +2,8 @@ const fs = require("fs");
 
 const path = require("path");
 
-// Organize Function will organize all your target folder's files in a different folders acc to their extensions
+// Organize Function will organize all your target folder's files in a
+// different folders acc to their extensions
 
 let types = {
   media: ["mp4", "mkv", "mp3"],
@@ -38,7 +39,8 @@ function organizeFn(dirPath) {
   // this doesExist will tell the Target Folder exists or not
 
   if (doesExist == true) {
-    destPath = path.join(dirPath, "organized_Files"); // D:\Batches\FJP-4\testFolder\organized_files- we are ready to create folder her
+    destPath = path.join(dirPath, "organized_Files");
+    // D:\Batches\FJP-4\testFolder\organized_files- we are ready to create folder here
 
     // we created a path for organized_Files Folder
 
@@ -58,6 +60,7 @@ function organizeFn(dirPath) {
 
 function organizeHelper(src, dest) {
   let childNames = fs.readdirSync(src);
+  //It will return all the files in the src folder in the form of an array.
   //console.log(childNames)
 
   for (let i = 0; i < childNames.length; i++) {
@@ -75,7 +78,7 @@ function organizeHelper(src, dest) {
 
 function getCategory(FileName) {
   let ext = path.extname(FileName).slice(1);
-  // we extraxcted extension names of the target Files
+  // we extracted extension names of the target Files
 
   //console.log(ext)
 

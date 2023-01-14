@@ -7,9 +7,9 @@
 
 //js mein input Array ke from mein jaata hai and that is array is process.argv Array
 
-const helpModule = require("../commands/help");
-const organizeModule = require("../commands/organize");
-const treeModule = require("../commands/tree");
+const helpModule = require("./commands/help");
+const organizeModule = require("./commands/organize");
+const treeModule = require("./commands/tree");
 
 let input = process.argv.slice(2);
 
