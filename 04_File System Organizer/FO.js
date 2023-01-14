@@ -1,4 +1,4 @@
-// We will be creating a File System Organizer//
+//File System Organizer//
 //Features of the Project -
 //If you have numerous Files in a folder and they are not Properly arranged
 //So you can use this tool to arrange them in specific directory according to their extension
@@ -13,7 +13,7 @@ const treeModule = require("./commands/tree");
 
 let input = process.argv.slice(2);
 
-let inputArr = input; // [organzie , folderpath]
+let inputArr = input; // [organize , folderpath]
 
 let command = inputArr[0];
 

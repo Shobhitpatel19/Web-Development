@@ -1,4 +1,4 @@
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 //Find out how to require inquirer
 
 const cp = require("child_process");

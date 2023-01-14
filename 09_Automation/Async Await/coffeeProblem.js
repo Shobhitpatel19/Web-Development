@@ -10,7 +10,7 @@ function placeOrder(drink) {
 
 function processOrder(order) {
   return new Promise(function (resolve) {
-    console.log("Your Ordeer is being prepared");
+    console.log("Your Order is being prepared");
     resolve(`${order} served`);
   });
 }

@@ -1,4 +1,4 @@
-// Stirng is a sequence of characters
+// String is a sequence of characters
 
 
 
@@ -21,7 +21,7 @@
 // let slicedStr = str.slice(3)
 // console.log(slicedStr)
 
-// // extarct pep from the str
+// // extract pep from the str
 
 // let pepstring = str.slice(0 ,3)
 // console.log(pepstring)

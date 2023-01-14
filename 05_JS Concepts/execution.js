@@ -27,5 +27,5 @@ function square(n) {
   return square;
 }
 
-var sqaure1 = sqaure(n);
+var sqaure1 = square(n);
 var square2 = square(6);
