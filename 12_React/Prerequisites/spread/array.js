@@ -7,6 +7,7 @@ let arr2 = [...arr]
 // spread operator consverts the array into strings
 
 arr[2] = 23
+arr2[2] = 47
 
 console.log(arr)
 console.log(arr2)
