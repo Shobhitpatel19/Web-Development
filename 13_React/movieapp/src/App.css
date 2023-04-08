@@ -66,3 +66,11 @@
   height: 4.5rem;
   margin-left: 5vw;
 }
+
+
+.movies-list{
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
