@@ -11,9 +11,10 @@ export class MovieList extends Component {
       hover: "",
       parr : [1],
       movies : [],
-      currPage : 1
+      currPage : 1,
+      favourites:[]
     };
-  }
+  } 
 
   async componentDidMount(){
     const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=128ddb90895ab5858a82b040dfcc9888&language=en-US&page=${this.state.currPage}`)
@@ -68,6 +69,32 @@ export class MovieList extends Component {
      }
   }
 
+  handleFavourites= (movie)=>{
+    let oldData = JSON.parse(localStorage.getItem('movies-app' || '[]'))
+
+    if(this.state.favourites.includes(movie.id)){
+      oldData = oldData.filter((m)=>m.id != movie.id)
+    }else{
+      oldData.push(movie)
+    }
+
+    localStorage.setItem("movies-app" , JSON.stringify(oldData))
+    console.log(oldData)
+
+    this.handleFavouritesState()
+  }
+
+  handleFavouritesState = (movie)=>{
+    let oldData = JSON.parse(localStorage.getItem('movies-app' || '[]'))
+    let temp = oldData.map((movie)=movie.id)
+
+    this.setState({
+      favourites: [...temp]
+    })
+  }
+
+   
+
   render() {
     console.log('render second');
     // let moviesArr = movies.results;
@@ -99,14 +126,15 @@ export class MovieList extends Component {
                 className="btn-wrapper"
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                {this.state.hover == movieElem.id && (
+                {this.state.hover == movieElem.id && 
                   <a
                     href="#"
                     className="btn btn-primary movies-button text-center"
+                    onClick={()=>this.handleFavourites(movieElem)}
                   >
-                    Add to Favourites
+                    {this.state.favourites.includes(movieElem.id)? "Remove from Favourites" : "Add to favourites"}
                   </a>
-                )}
+                }
               </div>
             </div>
           ))}
