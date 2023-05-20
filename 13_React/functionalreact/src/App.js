@@ -1,10 +1,12 @@
 import './App.css';
-import Test from '../components/Test';
+import Demo from './components/Demo';
+import Test from './components/Test';
 
 function App() {
   return (
     <div>
-      <Test/>
+      {/* <Test/> */}
+      <Demo/>
     </div>
   );
 }
